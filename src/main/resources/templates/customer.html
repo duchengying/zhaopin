@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vant@2.8/lib/index.css"
+    />
+    <title>菜单</title>
+</head>
+<body>
+<div id="app">
+    <van-list
+            v-model="loading"
+            :finished="finished"
+            finished-text="没有更多了"
+            @load="onLoad"
+    >
+        <div v-for>
+
+        </div>
+        <van-card
+                num="1"
+                price="2.00"
+                desc="描述信息"
+                title="商品标题"
+                thumb="https://img.yzcdn.cn/vant/ipad.jpeg"
+        />
+    </van-list>
+
+</div>
+<!-- 生产环境版本，优化了尺寸和速度 -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vant@2.8/lib/vant.min.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+       data:{
+           list: [],
+           loading: false,
+           finished: false,
+       },
+        methods:{
+            loaddata(){
+
+            }
+       }
+    });
+</script>
+</body>
+</html>
